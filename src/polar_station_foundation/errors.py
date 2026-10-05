@@ -33,3 +33,10 @@ class ConflictError(DomainError):
 
     code = "conflict"
     status = 409
+
+
+class InfeasibleError(DomainError):
+    """冻结决策无法同时满足容量与关键储备等硬约束。"""
+
+    code = "freeze_infeasible"
+    status = 422
